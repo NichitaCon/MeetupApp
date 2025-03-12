@@ -1,7 +1,8 @@
 import { Stack } from 'expo-router';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, FlatList } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 
+import events from '~/assets/events.json';
 import EventListItem from '~/components/EventListItem';
 
 export default function Events() {
@@ -9,8 +10,8 @@ export default function Events() {
     <>
         <Stack.Screen options={{ title: 'Events' }} />
 
-        {/* Event list item */}
-        <EventListItem/>
+        <FlatList className="bg-white" data = {events} renderItem={({ item }) => <EventListItem event={item} />} />
+
     </>
   );
 }
