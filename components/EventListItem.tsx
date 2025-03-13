@@ -1,12 +1,13 @@
 import { View, Text, Image } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
+import dayjs from "dayjs"
 
 export default function EventListItem({ event }) {
     return (
-        <View className='gap-3 p-3'>
+        <View className='gap-3 p-3 border-b border-gray-200'>
             <View className='flex-row'>
                 <View className='flex-1 gap-1'>
-                    <Text className='text-lg font-semibold text-amber-800 uppercase'>Wed 11 Sep · 19:30 CET</Text>
+                    <Text className='text-lg font-semibold text-amber-800 uppercase'>{dayjs(event.datetime).format("ddd, D, MMM")} · {dayjs(event.datetime).format("h:mm A")}</Text>
                     <Text className='text-xl font-bold' numberOfLines={2}>{event.title}</Text>
                     <Text className='text-gray-700'>{event.location}</Text>
                 </View>
