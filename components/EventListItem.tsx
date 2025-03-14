@@ -5,7 +5,7 @@ import dayjs from "dayjs"
 
 export default function EventListItem({ event }) {
     return (
-        <Link href={"/event"} asChild>
+        <Link href={`/${event.id}`} asChild>
             <Pressable className='gap-3 p-3 border-b border-gray-200'>
                 <View className='flex-row'>
                     <View className='flex-1 gap-1'>
