@@ -28,9 +28,9 @@ export default function EventPage() {
         
 
         {/* Footer */}
-        <View className='absolute bottom-0 left-0 right-0 pb-10 p-5 border-t-2 border-gray-200 flex-row justify-between items-center'>
+        <View className='absolute bottom-0 left-0 right-0 pb-10 p-5 border-t-2 border-gray-100 flex-row justify-between items-center'>
             <Text className='text-xl font-semibold'>Free</Text>
-            <Pressable className='p-5 px-8 bg-red-400 rounded-md'>
+            <Pressable className='p-4 px-10 bg-red-400 rounded-md'>
                 <Text className='font-bold text-white text-lg'>
                     Join and RSVP
                 </Text>
